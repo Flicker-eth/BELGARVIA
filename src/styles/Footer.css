@@ -1,0 +1,83 @@
+.footer-section {
+  background-color: #fff;
+  color: #111;
+  padding: 80px 0% 50px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.footer-column h4 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.footer-column li:hover {
+  color: #000;
+}
+
+.footer-column input {
+  width: 100%;
+  background-color: #f7f7f7;
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-column button {
+  background-color: #111;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  width: 100%;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 0.75rem;
+  color: #777;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.footer-copy {
+  text-align: center;
+  /* border-top: 1px solid #333; */
+  padding-top: 15px;
+  font-size: 14px;
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-copy a {
+  color: grey;          
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.footer-copy a:hover {
+  color: black;       
+}

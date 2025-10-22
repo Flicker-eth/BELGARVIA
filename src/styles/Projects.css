@@ -1,0 +1,129 @@
+/* --- Global Reset/Base --- */
+.projects-section {
+margin-bottom: 120px;
+}
+
+.projects-title {
+  font-size: 4.5vw;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+/* --- Project Card --- */
+.project-card {
+  position: relative;
+  display: flex;
+  margin-bottom: 150px;
+}
+
+/* --- Image Container --- */
+.project-image {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  height: 700px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* --- Curtain Overlay (default left → right) --- */
+.project-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: white;
+  transform: translateX(0);
+transition: transform 0.8s ease-out;
+  will-change: transform;
+  z-index: 2;
+}
+
+/* --- Active curtain animation (left → right) --- */
+.project-card.unfold-active.unfold-left .project-image::before {
+  transform: translateX(100%);
+}
+
+/* --- Right-to-left curtain animation --- */
+.project-card.unfold-right .project-image::before {
+  left: auto;
+  right: 0;
+  transform: translateX(0);
+}
+
+.project-card.unfold-active.unfold-right .project-image::before {
+  transform: translateX(-100%);
+}
+
+/* --- Info Card --- */
+.project-info {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  height: 300px;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  padding: 30px 40px;
+  width: 320px;
+  z-index: 3;
+  transition: opacity 1s ease, transform 1s ease;
+  opacity: 0;
+}
+.project-card.centered-card {
+  justify-content: right;
+  margin-left: 30px;
+}
+/* Fade-in when active */
+.project-card.unfold-active .project-info {
+  opacity: 1;
+}
+
+/* --- Move info card to left for unfold-right --- */
+.project-card.unfold-right .project-info {
+  left: -3%;
+  right: auto;
+}
+
+/* --- Headings and meta --- */
+.project-info h3 {
+  font-size: 1.5em;
+}
+
+.project-info .meta {
+  font-size: 0.95em;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.project-info p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .project-image {
+    height: 450px;
+  }
+
+  .project-info {
+    position: static;
+    transform: none;
+    margin-top: -60px;
+    width: calc(100% - 40px);
+    text-align: center;
+    opacity: 1;
+  }
+
+  .project-card.unfold-right .project-info {
+    left: auto;
+    right: auto;
+  }
+}
