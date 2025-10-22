@@ -5,7 +5,7 @@ import villaImg from "../assets/villa-partner.jpeg"; // replace with your image
 
 const ReviewPartner = () => {
   return (
-    <section className="review-partner-section">
+    <section className="review-partner-section" id="reviews-section">
       {/* ===== Reviews Section ===== */}
       <motion.div
         className="reviews-section"
@@ -17,7 +17,7 @@ const ReviewPartner = () => {
         <p className="subheading">HEAR OUR CLIENT</p>
         <h1 className="review-title">REVIEWS</h1>
         <p className="review-quote">
-          “Working with Woodland Architects was a blessing for our home. We wanted
+          “Working with BELGARVIA Architects was a blessing for our home. We wanted
           a space that felt modern but still warm and inviting, and they absolutely
           nailed it. We highly recommend them for architecture and design projects.”
         </p>
@@ -29,7 +29,7 @@ const ReviewPartner = () => {
       </motion.div>
 
       {/* ===== Partner With Us Section ===== */}
-      <div className="partner-section">
+      <div className="partner-section" id="contact-section">
         <div className="partner-left">
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
@@ -48,7 +48,7 @@ const ReviewPartner = () => {
 
           <form className="partner-form">
             <label>Your full name</label>
-            <input type="text" placeholder="Example Name" />
+            <input type="text" placeholder="Full Name" />
 
             <label>Your email address</label>
             <input type="email" placeholder="Example@mail.com" />

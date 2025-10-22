@@ -49,10 +49,10 @@
     align-items: flex-start;
 }
 .about-block p {
+    font-family: Arial, sans-serif;
     font-size: 14px;
     line-height: 1.6;
     color: #333;
-    /* REMOVED: Ensures the paragraph has no top margin pushing it down */
     margin: 0; 
 }
 

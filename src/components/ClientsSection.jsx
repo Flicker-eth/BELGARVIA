@@ -89,7 +89,7 @@ function ClientsSection() {
     }, []);
 
     return (
-        <section className="clients-section">
+        <section className="clients-section" id='clients-section'>
             <div className="clients-content-wrapper">
                 
                 <div className="stats-container">

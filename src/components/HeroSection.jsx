@@ -32,8 +32,8 @@ function HeroSection() {
     };
 
     return (
-       <section className="hero-section-woodland">
-    <div className="hero-images-wrapper">
+       <section id="hero-section" className="hero-section-belgarviaa">
+         <div className="hero-images-wrapper">
         
         {/* CRITICAL: ADD THIS ELEMENT HERE */}
        <div className="curtain-overlay top-half"></div> 

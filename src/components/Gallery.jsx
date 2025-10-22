@@ -28,20 +28,43 @@ const Gallery = () => {
   // A base rise for the whole container (subtle)
   const containerY = useTransform(scrollYProgress, [0.12, 0.5], [200, 0]);
   const containerScale = useTransform(scrollYProgress, [0.12, 0.6], [0.95, 1]);
+const finalPositions = [
+  { x: -100, y: 30 }, // left top
+  { x: 200, y: -100 }, // left bottom
+  { x: 205, y: -225 },     // center
+  { x: 150, y: 180 },  // right top
+  { x: 320, y: -100 },  // right bottom
+];
 
-  // For each image compute independent transforms so they stagger & scatter
 const imageTransforms = images.map((_, i) => {
+  // initial positions based on simple scatter directions
   const direction = i % 4; // 0=left,1=right,2=top,3=bottom
   const startX = direction === 0 ? -400 : direction === 1 ? 400 : 0;
   const startY = direction === 2 ? -300 : direction === 3 ? 300 : 0;
 
-  const x = useTransform(scrollYProgress, [0.1, 0.6], [startX, 0]);
-  const y = useTransform(scrollYProgress, [0.1, 0.6], [startY, 0]);
+  // final positions for layout
+  const final = finalPositions[i % finalPositions.length];
+
+  const x = useTransform(scrollYProgress, [0.1, 0.6], [startX, final.x]);
+  const y = useTransform(scrollYProgress, [0.1, 0.6], [startY, final.y]);
   const scale = useTransform(scrollYProgress, [0.4, 0.9], [1, 1.2]);
   const opacity = useTransform(scrollYProgress, [0.15, 0.6], [0, 1]);
 
   return { x, y, scale, opacity, rotate: 0 };
 });
+  // For each image compute independent transforms so they stagger & scatter
+// const imageTransforms = images.map((_, i) => {
+//   const direction = i % 4; // 0=left,1=right,2=top,3=bottom
+//   const startX = direction === 0 ? -400 : direction === 1 ? 400 : 0;
+//   const startY = direction === 2 ? -300 : direction === 3 ? 300 : 0;
+
+//   const x = useTransform(scrollYProgress, [0.1, 0.6], [startX, 0]);
+//   const y = useTransform(scrollYProgress, [0.1, 0.6], [startY, 0]);
+//   const scale = useTransform(scrollYProgress, [0.4, 0.9], [1, 1.2]);
+//   const opacity = useTransform(scrollYProgress, [0.15, 0.6], [0, 1]);
+
+//   return { x, y, scale, opacity, rotate: 0 };
+// });
 
 
 
@@ -49,7 +72,7 @@ const imageTransforms = images.map((_, i) => {
 
 
   return (
-    <section className="gallery-section" ref={galleryRef}>
+    <section className="gallery-section" ref={galleryRef} id="gallery-section">
       {/* Sticky header — CSS handles pinning */}
       <motion.div
         className="gallery-header"

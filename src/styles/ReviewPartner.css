@@ -106,8 +106,9 @@
 }
 
 .partner-form label {
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: #444;
+  font-weight: 600;
 }
 
 .partner-form input{
@@ -118,6 +119,8 @@
   width: 80%;
   resize: none;
   outline: none;
+
+    font-family: monospace;
 }
 
 .partner-form textarea {
@@ -146,7 +149,7 @@
   border: none;
   cursor: pointer;
     width: 80%;
-
+font-family: monospace;
   transition: background 0.3s ease;
 }
 

@@ -13,21 +13,28 @@ function AboutSection() {
           <h2 className="about-title">About</h2>
           
           {/* Right Column: Two Paragraph Blocks */}
-          <div className="about-content-blocks">
-            <div className="about-block">
-              <p>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-                ornare, eros dolor interdum nulla."
-              </p>
-            </div>
-            <div className="about-block">
-              <p>
-                "Ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id
-                rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere."
-              </p>
-            </div>
-          </div>
+        <div className="about-content-blocks">
+
+  <div className="about-block">
+    <p>
+      AT <strong>BELGARVIA</strong>, WE BELIEVE THAT EVERY SPACE TELLS A STORY — 
+      A STORY OF COMFORT, ELEGANCE, AND INDIVIDUALITY. 
+      WE ARE A NEW-AGE BRAND THAT REDEFINES HOW PEOPLE EXPERIENCE LUXURY LIVING, 
+      FROM BREATHTAKING RESORTS AND BOUTIQUE HOTELS TO THE ARTFUL CREATION OF YOUR DREAM HOME. <br /><br />
+      OUR VISION IS SIMPLE YET POWERFUL TO BUILD AND DESIGN SPACES THAT FEEL LIKE HOME.
+  
+    </p>
+  </div>
+
+  <div className="about-block">
+    <p>
+      WE ARE A COLLECTIVE OF PASSIONATE ARCHITECTS, INTERIOR DESIGNERS, PROJECT MANAGERS, 
+      AND CREATIVE VISIONARIES COMMITTED TO TRANSFORMING IMAGINATION INTO REALITY. <br /><br />
+FROM SERENE RETREATS TO DREAM HOMES, WE COMBINE DESIGN AND CRAFTSMANSHIP TO BRING YOUR VISION TO LIFE.
+    </p>
+  </div>
+
+</div>
 
         </div>
       </div>

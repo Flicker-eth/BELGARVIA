@@ -12,10 +12,10 @@ const servicesData = [
         title: "Architecture",
         description: "Beyond surface-level styling, we craft interiors that feel as good as they look.",
         details: [
-            "Spatial Identity",
-            "Material & Finish Selection",
-            "Furniture & Lighting Design",
-            "Detail Development"
+        "Concept Design",
+        "Architectural Planning",
+        "3D Visualization & Modeling",
+        "Construction Documentation"
         ],
         image: serviceImage1,
     },
@@ -24,10 +24,10 @@ const servicesData = [
         title: "Interior Design",
         description: "We organize environments around people, movement, and use, creating clarity, comfort, and adaptability.",
         details: [
-            "Conceptual Design",
-            "Space Planning",
-            "Custom Millwork",
-            "Project Management"
+           "Spatial Identity",
+           "Material & Finish Selection",
+        "Furniture & Lighting Design",
+          "Detail Development"
         ],
         image: serviceImage2,
     },
@@ -36,10 +36,10 @@ const servicesData = [
         title: "Layout Planning",
         description: "Comprehensive planning from initial concept to final execution.",
         details: [
-            "Conceptual Design",
-            "Space Planning",
-            "Custom Millwork",
-            "Project Management"
+            "Functional Zoning",
+            "Human-Centered Design",
+            "Circulation Strategy",
+            "Flexibility & Future Use"
         ], 
         image: serviceImage3,
     },
@@ -48,7 +48,7 @@ const servicesData = [
         title: "Project Management",
         description: "We organize environments around people, movement, and use, creating clarity, comfort, and adaptability.",
         details: [
-            "Conceptual Design",
+             "Conceptual Design",
             "Space Planning",
             "Custom Millwork",
             "Project Management"

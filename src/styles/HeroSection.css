@@ -2,7 +2,7 @@
 
 
 /* Hero Section Wrapper */
-.hero-section-woodland {
+.hero-section-belgarvia {
     width: 100%;
     padding-left: 0;
     padding-right: 0;
@@ -89,7 +89,7 @@
 
 /* Responsive */
 @media screen and (max-width: 991px) {
-    .hero-section-woodland {
+    .hero-section-belgarvia {
         padding-left: 15px;
         padding-right: 15px;
     }
