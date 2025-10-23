@@ -175,9 +175,9 @@
 
 @media screen and (max-width: 600px) {
   .page-title {
-    font-size: 10vw;
+    font-size: 14vw;
     top: 8vw;
-    right: 4vw;
+    right: -7vw;
   }
 
 
