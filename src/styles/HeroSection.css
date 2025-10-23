@@ -97,6 +97,7 @@
     .hero-image-background,
     .hero-image-foreground {
         background-attachment: scroll;
+        height: 70vh;
     }
 
     .page-title {
@@ -160,4 +161,24 @@
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+@media screen and (max-width: 991px) {
+  .page-title {
+    font-size: 12vw;  /* smaller text */
+    top: 10vw;
+    right: 4vw;
+  }
+
+
+}
+
+@media screen and (max-width: 600px) {
+  .page-title {
+    font-size: 10vw;
+    top: 8vw;
+    right: 4vw;
+  }
+
+
 }

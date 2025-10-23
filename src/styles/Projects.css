@@ -1,4 +1,3 @@
-/* --- Global Reset/Base --- */
 .projects-section {
 margin-bottom: 120px;
 }
@@ -74,6 +73,9 @@ transition: transform 0.8s ease-out;
   z-index: 3;
   transition: opacity 1s ease, transform 1s ease;
   opacity: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
 }
 .project-card.centered-card {
   justify-content: right;
@@ -102,9 +104,12 @@ transition: transform 0.8s ease-out;
 }
 
 .project-info p {
-  font-size: 1em;
-  line-height: 1.6;
+  font-size: 0.9em;
+  line-height: 1.2;
   color: #555;
+   word-wrap: break-word;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
 }
 
 /* --- Responsive --- */
@@ -120,10 +125,102 @@ transition: transform 0.8s ease-out;
     width: calc(100% - 40px);
     text-align: center;
     opacity: 1;
+    height: auto;
   }
-
+ .project-info p {
+    overflow-wrap: break-word; 
+  }
   .project-card.unfold-right .project-info {
     left: auto;
     right: auto;
+  }
+}
+
+
+/* --- Tablets --- */
+@media (max-width: 1024px) {
+  .projects-title {
+    font-size: 6vw;
+    text-align: center;
+  }
+
+  .project-card {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+
+  .project-image {
+    width: 90%;
+    height: 400px;
+  }
+
+  .project-info {
+    position: relative;
+    width: 85%;
+    margin-top: 20px;
+    opacity: 1;
+    transform: none;
+    text-align: center;
+    padding: 25px 20px;
+  }
+}
+
+/* --- Mobile Devices --- */
+@media (max-width: 768px) {
+  .projects-title {
+    font-size: 8vw;
+  }
+
+  .project-card {
+    margin-bottom: 80px;
+  }
+
+  .project-image {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+
+  }
+
+  .project-info {
+    width: 80%;
+    margin-top: 15px;
+    padding: 20px;
+    font-size: 0.95em;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .project-info h3 {
+    font-size: 1.3em;
+  }
+
+  .project-info .meta {
+    font-size: 0.9em;
+  }
+
+  .project-info p {
+    font-size: 0.9em;
+  }
+}
+
+/* --- Very Small Screens --- */
+@media (max-width: 480px) {
+  .project-image {
+    height: 250px;
+  }
+
+  .project-info {
+    width: 95%;
+    padding: 18px;
+  }
+
+  .project-info h3 {
+    font-size: 1.2em;
+  }
+
+  .project-info p {
+    font-size: 0.85em;
   }
 }

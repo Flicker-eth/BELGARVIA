@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../styles/ReviewPartner.css";
-import villaImg from "../assets/villa-partner.jpeg"; // replace with your image
+import villaImg from "../assets/villa-partner.jpeg"; 
 
 const ReviewPartner = () => {
   return (
@@ -17,9 +17,10 @@ const ReviewPartner = () => {
         <p className="subheading">HEAR OUR CLIENT</p>
         <h1 className="review-title">REVIEWS</h1>
         <p className="review-quote">
-          “Working with BELGARVIA Architects was a blessing for our home. We wanted
-          a space that felt modern but still warm and inviting, and they absolutely
-          nailed it. We highly recommend them for architecture and design projects.”
+          “Working with BELGARVIA Architects was a blessing for our home. We
+          wanted a space that felt modern but still warm and inviting, and they
+          absolutely nailed it. We highly recommend them for architecture and
+          design projects.”
         </p>
 
         <div className="review-arrows">
@@ -41,9 +42,9 @@ const ReviewPartner = () => {
           </motion.h2>
 
           <p className="partner-desc">
-            If you’re someone who’s looking to bring a space to life, share a few
-            details to help me reach out to you so we can discuss how to bring your
-            vision to life.
+            If you’re someone who’s looking to bring a space to life, share a
+            few details to help me reach out to you so we can discuss how to
+            bring your vision to life.
           </p>
 
           <form className="partner-form">

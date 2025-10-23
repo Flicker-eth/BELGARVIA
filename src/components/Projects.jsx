@@ -12,7 +12,7 @@ const projects = [
     type: "Residential",
     year: "2024",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "A stunning contemporary villa designed for modern living, boasting clean lines, expansive glass, and seamless indoor-outdoor flow. Located in Aspen, this residence offers luxury and comfort with breathtaking views.",
     image: villa1,
     direction: "left",
   },
@@ -23,7 +23,7 @@ const projects = [
     type: "Residential",
     year: "2024",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Nestled amidst lush greenery, The Willow Loft offers a serene retreat with an open-plan design and large sliding glass doors that invite nature in. This residential project in Aspen blends modern aesthetics with a tranquil environment.",
     image: villa2,
     direction: "right",
   },
@@ -34,7 +34,7 @@ const projects = [
     type: "Residential",
     year: "2024",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "The Sunshine Retreat is a radiant architectural marvel featuring vast glass walls that maximize natural light and offer panoramic views of the surrounding landscape. This Aspen residence is a harmonious blend of sleek design and natural beauty.",
     image: villa3,
     direction: "left",
   },
@@ -61,30 +61,29 @@ const Projects = () => {
 
   return (
     <section className="projects-section" id="projects-section">
-  <h2 className="projects-title">PROJECTS</h2>
-  {projects.map((project, index) => (
-    <div
-      key={project.id}
-      ref={(el) => (refs.current[index] = el)}
-      className={`project-card unfold-${project.direction} ${
-        (index + 1) % 2 === 0 ? "centered-card" : ""
-      }`}
-    >
-      <div
-        className="project-image"
-        style={{ backgroundImage: `url(${project.image})` }}
-      />
-      <div className="project-info">
-        <h3>{project.title}</h3>
-        <p className="meta">
-          {project.location} • {project.type} • {project.year}
-        </p>
-        <p>{project.description}</p>
-      </div>
-    </div>
-  ))}
-</section>
-
+      <h2 className="projects-title">PROJECTS</h2>
+      {projects.map((project, index) => (
+        <div
+          key={project.id}
+          ref={(el) => (refs.current[index] = el)}
+          className={`project-card unfold-${project.direction} ${
+            (index + 1) % 2 === 0 ? "centered-card" : ""
+          }`}
+        >
+          <div
+            className="project-image"
+            style={{ backgroundImage: `url(${project.image})` }}
+          />
+          <div className="project-info">
+            <h3>{project.title}</h3>
+            <p className="meta">
+              {project.location} • {project.type} • {project.year}
+            </p>
+            <p>{project.description}</p>
+          </div>
+        </div>
+      ))}
+    </section>
   );
 };
 
